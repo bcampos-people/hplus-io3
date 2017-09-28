@@ -4,10 +4,25 @@ page-home,
     width: 28px;
     height: 28px;
     display: inline-block;
-    vertical-align: sub;
-    background: url("../assets/img/ionbooking-ico.png") no-repeat;
+    vertical-align: middle;
+    background: url("../assets/img/hplus-ico.png") no-repeat;
     background-size: 100%;    
   }
+
+  .text-title {
+    font-size: .9em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .toolbar-title {
+    padding: 0;
+  }
+
+  [class*='item-divider'] {
+    border-bottom-color: transparent;
+  }
+
   .booking-card {
     padding: 16px;
     border-top: 5rem solid color($colors, primary);
@@ -190,6 +205,17 @@ page-home,
 
         .hide-sm {
           display: none;
+        }
+
+        .hotel-bg {
+          .bg-filter {
+            .discount {
+              font-size: .9em;
+              font-weight: bold;
+              text-shadow: 0 2px 0 rgba(0, 0, 0, .1);
+              background-color: color($colors, active);
+            }
+          }
         }
       }
     }

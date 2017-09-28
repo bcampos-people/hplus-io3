@@ -1,13 +1,13 @@
 <!-- -->
 <ion-header class="animated fadeIn no-shadow">
 
-  <ion-navbar class="no-border" color="primary">
+  <ion-navbar class="no-border" color="dark">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
       <div ion-text class="icon-title text-white"></div>
-      Hotel <strong>Plus</strong>
+      <span class="text-title">Hotel Plus</span>
     </ion-title>
     <ion-buttons end>
       <button ion-button tappable (click)="presentNotifications($event)">
@@ -20,9 +20,8 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content class="animated fadeIn common-bg">
-  <!--list menu on the top-->
+  <!-- CHECK-IN / CHECK-OUT -->
   <div class="booking-card marginB-16px" style="display: none;">
     <ion-grid class="card" col-md-8 col-lg-6>
       <ion-row>
@@ -158,6 +157,7 @@
     </ion-grid>
   </div>
 
+  <!-- RENT A CAR -->
   <ion-grid style="display: none;">
     <ion-row>
       <ion-col col-md-8 col-lg-6 offset-md-2 offset-lg-3>
@@ -181,9 +181,10 @@
     </ion-row>
   </ion-grid>
   
-  <hr class="secondary-bg quarter-op" no-margin>
+  <!-- <hr class="secondary-bg quarter-op" no-margin> -->
 
-  <ion-item-group class="home-widget">
+  <!-- HOTELS NEAR YOU -->
+  <ion-item-group class="home-widget" style="display: none;">
     <ion-item-divider color="primary">
       <h2 ion-text class="bold text-white">
         <ion-icon name="home"></ion-icon> 
@@ -196,15 +197,62 @@
     </ion-item>
   </ion-item-group>
 
+  <!-- MENU PRINCIPAL -->
+  <ion-item-group class="home-widget">
+      <ion-item>
+        <ion-grid class="list-hotels primary-bg" no-padding>
+          <ion-row no-padding>
+            <ion-col *ngFor="let hotel of hotels; let i = index" col-6 col-md-3 tappable (click)="viewHotel(hotel.id)">
+              <div class="hotel-bg" [ngStyle]="{'background-image': 'url(' + hotel.thumb + ')'}" *ngIf="i < 4">
+                <div class="bg-filter">                 
+                  <div class="bottom-info">
+                    <div>
+                      <div class="pull-left">
+                        <h5 ion-text class="text-white">{{ hotel.name }}</h5>
+                      </div>
+                      <div class="pull-right">
+                        <span class="origin-price hide-sm"
+                              *ngIf="hotel.sale_price">{{ hotel.price | currency:'USD':true }}</span>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+  
+                    <div>
+                      <div class="pull-left">
+                        <ion-badge class="square" color="secondary">{{ hotel.rating }}</ion-badge>
+                        <span class="rating-label text-white" ion-text> of 5 - guest rating</span>
+                      </div>
+                      <div class="pull-right">
+                        <span class="origin-price hide-lg"
+                              *ngIf="hotel.sale_price">{{ hotel.price | currency:'USD':true:'2.0' }}</span>
+                        <span class="price text-white" *ngIf="!hotel.sale_price"
+                              ion-text>{{ hotel.price | currency:'USD':true:'2.0' }}</span>
+                        <span class="sale-price" *ngIf="hotel.sale_price"
+                              ion-text class="text-white">{{ hotel.sale_price | currency:'USD':true:'2.0' }}</span>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  
+      </ion-item>
+    </ion-item-group>
+
+  <!-- HOTEIS DA REDE -->
   <ion-item-group class="home-widget">
     <ion-item-divider color="primary">
       <h2 ion-text class="bold text-white">
         <ion-icon name="pricetags"></ion-icon> 
-        Promotions Today
+        Demais Hotéis da Rede
       </h2>
     </ion-item-divider>
-    <ion-item>
 
+    <ion-item>
       <ion-grid class="list-hotels primary-bg" no-padding>
         <ion-row no-padding>
           <ion-col *ngFor="let hotel of hotels; let i = index" col-6 col-md-3 tappable (click)="viewHotel(hotel.id)">
