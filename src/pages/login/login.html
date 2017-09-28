@@ -26,16 +26,17 @@
       </ion-item>
     </ion-list>
 
-    <p text-right ion-text color="light" tappable (click)="forgotPass()"><strong>Esqueceu a senha?</strong></p>
+    <!-- ESQUECEU A SENHA -->
+    <!-- <p text-right ion-text color="light" tappable (click)="forgotPass()"><strong>Esqueceu a senha?</strong></p> -->
 
     <div>
       <button ion-button icon-start block color="secondary" tappable (click)="login()">
         <ion-icon name="log-in"></ion-icon> Entrar
       </button>
-
-      <p text-center ion-text color="light">ou entrar com:</p>
-
+      
       <ion-grid>
+        <p text-center ion-text color="light">ou entrar com:</p>
+      
         <ion-row>
           <ion-col col-4>
             <button ion-button icon-only block class="btn-facebook">
@@ -54,14 +55,14 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-
     </div>
 
-
-    <!-- Other links -->
+    <!-- CADASTRE-SE -->
+    <!--
     <div text-center margin-top>
       <span ion-text color="light" tappable (click)="register()">Novo aqui? <strong>Cadastre-se</strong></span>
     </div>
+    -->
 
   </div>
 </ion-content>
