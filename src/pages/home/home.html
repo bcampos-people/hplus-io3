@@ -7,7 +7,7 @@
     </button>
     <ion-title>
       <div ion-text class="icon-title text-white"></div>
-      ion<strong>Booking</strong>
+      Hotel <strong>Plus</strong>
     </ion-title>
     <ion-buttons end>
       <button ion-button tappable (click)="presentNotifications($event)">
@@ -23,7 +23,7 @@
 
 <ion-content class="animated fadeIn common-bg">
   <!--list menu on the top-->
-  <div class="booking-card marginB-16px">
+  <div class="booking-card marginB-16px" style="display: none;">
     <ion-grid class="card" col-md-8 col-lg-6>
       <ion-row>
         <ion-col class="no-padding">
@@ -158,7 +158,7 @@
     </ion-grid>
   </div>
 
-  <ion-grid>
+  <ion-grid style="display: none;">
     <ion-row>
       <ion-col col-md-8 col-lg-6 offset-md-2 offset-lg-3>
 
@@ -180,7 +180,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
+  
   <hr class="secondary-bg quarter-op" no-margin>
 
   <ion-item-group class="home-widget">
