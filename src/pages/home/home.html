@@ -157,46 +157,6 @@
     </ion-grid>
   </div>
 
-  <!-- RENT A CAR -->
-  <ion-grid style="display: none;">
-    <ion-row>
-      <ion-col col-md-8 col-lg-6 offset-md-2 offset-lg-3>
-
-        <ion-card class="home-card no-marginT marginB-32px" no-padding>
-
-          <ion-list>
-            <button ion-item color="secondary" tappable (click)="searchCar()">
-              <ion-icon name="car" item-start></ion-icon>
-                Rent a Car
-            </button>
-            <button ion-item color="secondary" tappable (click)="searchTrip()">
-              <ion-icon name="beer" item-start></ion-icon>
-                Trip Activities
-            </button>
-          </ion-list>
-
-        </ion-card>
-
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  
-  <!-- <hr class="secondary-bg quarter-op" no-margin> -->
-
-  <!-- HOTELS NEAR YOU -->
-  <ion-item-group class="home-widget" style="display: none;">
-    <ion-item-divider color="primary">
-      <h2 ion-text class="bold text-white">
-        <ion-icon name="home"></ion-icon> 
-        Hotels Near You
-        <ion-badge class="pull-right green-bg text-white" tappable (click)="viewHotels()">SEE MORE</ion-badge>
-      </h2>
-    </ion-item-divider>
-    <ion-item>
-      <div id="home-map" class="google-map"></div>
-    </ion-item>
-  </ion-item-group>
-
   <!-- MENU PRINCIPAL -->
   <ion-item-group class="menu-widget">
     <ion-item>
@@ -245,7 +205,6 @@
     </ion-item>
   </ion-item-group>
 
-  
   <!-- HOTEIS DA REDE -->
   <ion-item-group class="home-widget">
     <ion-item-divider color="primary">
@@ -302,6 +261,5 @@
 
     </ion-item>
   </ion-item-group>
-
 
 </ion-content>
