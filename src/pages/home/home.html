@@ -198,23 +198,55 @@
   </ion-item-group>
 
   <!-- MENU PRINCIPAL -->
-  <ion-item-group class="home-widget">
+  <ion-item-group class="menu-widget">
     <ion-item>
-      <ion-grid>
-        <ion-row no-padding>
+      <ion-grid> <!-- incluir atributo 'no-padding' para remover o espaço da área -->
+
+        <ion-row>
           <ion-col col-6 col-md-3 tappable>
-            <button ion-button outline full default (click)="logEvent($event)">Outline</button>
+            <button ion-button full class="button-custom icon-room" (click)="logEvent($event)">
+              <span class="button-label">Room Service</span>
+            </button>
           </ion-col>
           <ion-col col-6 col-md-3 tappable>
-            <button ion-button outline full default>Outline</button>
+            <button ion-button full class="button-custom icon-perto" (click)="logEvent($event)">
+              <span class="button-label">Perto de Mim</span>
+            </button>
           </ion-col>
         </ion-row>
+
+        <ion-row>
+          <ion-col col-6 col-md-3 tappable>
+            <button ion-button full class="button-custom icon-extrato" (click)="logEvent($event)">
+              <span class="button-label">Extrato da Conta</span>
+            </button>
+          </ion-col>
+          <ion-col col-6 col-md-3 tappable>
+            <button ion-button full class="button-custom icon-ramais" (click)="logEvent($event)">
+              <span class="button-label">Lista de Ramais</span>
+            </button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6 col-md-3 tappable>
+            <button ion-button full class="button-custom icon-guestone" (click)="logEvent($event)">
+              <span class="button-label">GuestOne</span>
+            </button>
+          </ion-col>
+          <ion-col col-6 col-md-3 tappable>
+            <button ion-button full class="button-custom icon-service" (click)="logEvent($event)">
+              <span class="button-label">Guest Service</span>
+            </button>
+          </ion-col>
+        </ion-row>
+
       </ion-grid>
     </ion-item>
   </ion-item-group>
 
   
-    <!-- HOTEIS DA REDE -->
+  <!-- HOTEIS DA REDE -->
   <ion-item-group class="home-widget">
     <ion-item-divider color="primary">
       <h2 ion-text class="bold text-white">

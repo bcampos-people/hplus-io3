@@ -172,7 +172,8 @@ page-home,
     }
   }
 
-  .home-widget {
+  .home-widget,
+  .menu-widget {
     .item {
       padding: 0;
       &.item-divider {
@@ -183,6 +184,17 @@ page-home,
         .label {
           margin: 0;
         }
+      }
+    }
+  }
+
+  // Menu
+  .menu-widget {
+    .item {
+      background-color: rgba(0, 0, 0, 0.01);
+      .col {
+        // padding: 0; /* remove o espaço dos botões no menu */
+        box-sizing: border-box;
       }
     }
   }
@@ -217,7 +229,60 @@ page-home,
             }
           }
         }
+
       }
     }
   }
+}
+
+// Botões
+.button-custom {
+  margin: 0;
+  height: auto;
+  min-height: 150px;
+  position: relative;
+  //border-radius: .2em;
+  text-transform: none;
+  background-color: #fff;
+  box-shadow: 0 0.2em 0.5rem rgba(0, 0, 0, 0.1);
+}
+.button-label {
+  bottom: 0;
+  width: 100%;
+  font-size: .9em;
+  padding: 0 0 7.5%;
+  position: absolute;
+  color: color($colors, iron);
+}
+
+// Ícones
+.icon-room {
+  background: #fff url("../assets/icon/ico-room_service.png") no-repeat;
+  background-size: 70%; 
+}
+.icon-perto {
+  background: #fff url("../assets/icon/ico-perto_mim.png") no-repeat;
+  background-size: 65%; 
+}
+.icon-extrato {
+  background: #fff url("../assets/icon/ico-extrato_conta.png") no-repeat;
+  background-size: 63.5%; 
+}
+.icon-ramais {
+  background: #fff url("../assets/icon/ico-lista_ramais.png") no-repeat;
+  background-size: 65%; 
+}
+.icon-guestone {
+  background: #fff url("../assets/icon/ico-guestone.png") no-repeat;
+  background-size: 65%; 
+}
+.icon-service {
+  background: #fff url("../assets/icon/ico-guest_service.png") no-repeat;
+  background-size: 67.5%; 
+}
+
+
+.button-custom {
+  background-position-x: center;
+  background-position-y: 25%;
 }
